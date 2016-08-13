@@ -2,7 +2,8 @@
 'use strict';
 
 var argv = require('yargs')
-    .usage('Usage: quote-bot -c <path to config>')
+    .usage('Usage: quote-bot -c <config_path>')
+    .command('init <channel> <quotes_path>', 'Initialize with quotes from a channel')
     .config('config')
     .default('config', 'config.json')
     .alias('c', 'config')
@@ -11,6 +12,12 @@ var argv = require('yargs')
     .alias('h', 'help')
     .argv
 
+var QuoteStore = require('../lib/quote-store.js');
 var IrcController = require('../lib/irc-controller.js');
 
-var controller = new IrcController(argv);
+var quotes = new QuoteStore(() => {
+    if (argv.channel && argv.quotes_path) {
+        quotes.init('#' + argv.channel, argv.quotes_path);
+    }
+    var controller = new IrcController(quotes, argv);
+});
