@@ -1,0 +1,48 @@
+{
+    "name": "quote-bot",
+    "version": "0.0.1",
+    "description": "Simple quote bot in NodeJS",
+    "author": "Ed Chen <edychen@gmail.com>",
+    "license": "MIT",
+    "homepage": "https://github.com/yokuyuki/quote-bot",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yokuyuki/quote-bot"
+    },
+    "bugs": {
+        "url": "https://github.com/yokuyuki/quote-bot/issues"
+    },
+    "keywords": [
+        "quote",
+        "bot"
+    ],
+    "bin": "./bin/bot.js",
+    "scripts": {
+        "test": "eslint bin/ lib/ test/ && mocha",
+        "start": "node ./bin/bot.js",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+    },
+    "dependencies": {
+        "irc": "^0.5.0",
+        "lodash": "^4.6.1",
+        "yargs": "^4.8.1"
+    },
+    "preferGlobal": true,
+    "private": false,
+    "directories": {
+        "bin": "./bin",
+        "lib": "./lib"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "eslint": "^2.1.0",
+        "mocha": "^2.4.5",
+        "sinon": "^1.17.3",
+        "sinon-chai": "^2.8.0"
+    },
+    "engines": {
+        "node": ">= 0.10.x",
+        "npm": ">= 2.0.x"
+    }
+}
