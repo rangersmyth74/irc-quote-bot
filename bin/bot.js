@@ -10,7 +10,7 @@ var argv = require('yargs')
     .version(() => require('../package.json').version)
     .help('h')
     .alias('h', 'help')
-    .argv
+    .argv;
 
 var QuoteStore = require('../lib/quote-store.js');
 var IrcController = require('../lib/irc-controller.js');
@@ -19,5 +19,5 @@ var quotes = new QuoteStore(() => {
     if (argv.channel && argv.quotes_path) {
         quotes.init('#' + argv.channel, argv.quotes_path);
     }
-    var controller = new IrcController(quotes, argv);
+    new IrcController(quotes, argv);
 });
