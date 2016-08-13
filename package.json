@@ -28,7 +28,8 @@
         "lodash": "^4.6.1",
         "yargs": "^4.8.1",
         "lokijs": "^1.4.1",
-        "touch": "^1.0.0"
+        "touch": "^1.0.0",
+        "winston": "^2.2.0"
     },
     "preferGlobal": true,
     "private": false,
