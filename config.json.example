@@ -9,5 +9,10 @@
         "add_quote": "+quote",
         "del_quote": "-quote"
     },
-    "quote_limit": 5
+    "quote_limit": 5,
+    "access": {
+        "get": ["~", "&", "@", "%", "+"],
+        "put": ["~", "&", "@", "%"],
+        "del": ["~", "&"]
+    }
 }
