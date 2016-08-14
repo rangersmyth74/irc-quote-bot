@@ -15,18 +15,23 @@ IRC quote bot is a Node.js application that will add, delete, and get quotes for
 
 ### Installation
 
-1. `git clone` this rep
-2. Edit a `config.json` to put at least the server name and channels the bot to join. See `config.json.example` for examples. If you place config.json in the base directory, the app will pick it up automatically.
-3. Start up the quote bot by running if the config file is in the default location.
+1. Install by running:
 
   ```
-  npm start
+  npm install -g irc-quote-bot
+  ```
+
+2. Edit a `config.json` to put at least the server name and channels the bot to join. See `config.json.example` for examples. If you place config.json in the base directory, the app will pick it up automatically.
+3. Start up the quote bot by running it if the config file is in the default location.
+
+  ```
+  irc-quote-bot
   ```
   
   Otherwise, you'll need to specify where the config file is:
   
   ```
-  npm start -- -c <config path>
+  irc-quote-bot -- -c <config path>
   ```
 
 ### Importing data
@@ -35,7 +40,7 @@ IRC quote bot is a Node.js application that will add, delete, and get quotes for
 2. Run the following command to import the data:
 
   ```
-  npm start -- init <channel> <quote path>  
+  irc-quote-bot init <channel> <quote path>  
   ```
   
 3. The app will quit when it's done importing.
