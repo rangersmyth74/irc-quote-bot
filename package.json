@@ -1,6 +1,6 @@
 {
     "name": "quote-bot",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Simple quote bot in NodeJS",
     "author": "Ed Chen <edychen@gmail.com>",
     "license": "MIT",
