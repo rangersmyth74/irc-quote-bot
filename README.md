@@ -33,7 +33,7 @@ IRC quote bot is a Node.js application that will add, delete, and get quotes for
   Otherwise, you'll need to specify where the config file is:
   
   ```
-  irc-quote-bot -- -c <config path>
+  irc-quote-bot -c <config path>
   ```
 
 ### Importing data
