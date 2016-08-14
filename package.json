@@ -1,90 +1,90 @@
 {
-    "name": "irc-quote-bot",
-    "version": "0.3.0",
-    "description": "Simple quote bot in NodeJS",
-    "author": "Ed Chen <edychen@gmail.com>",
-    "license": "MIT",
-    "homepage": "https://github.com/yokuyuki/irc-quote-bot",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/yokuyuki/irc-quote-bot"
+  "name": "irc-quote-bot",
+  "version": "0.3.1",
+  "description": "Simple quote bot in NodeJS",
+  "author": "Ed Chen <edychen@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/yokuyuki/irc-quote-bot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yokuyuki/irc-quote-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/yokuyuki/irc-quote-bot/issues"
+  },
+  "keywords": [
+    "quote",
+    "bot"
+  ],
+  "bin": "./bin/bot.js",
+  "scripts": {
+    "test": "eslint bin/ lib/ test/",
+    "start": "node ./bin/bot.js",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "irc": "^0.5.0",
+    "lodash": "^4.6.1",
+    "yargs": "^4.8.1",
+    "lokijs": "^1.4.1",
+    "touch": "^1.0.0",
+    "winston": "^2.2.0"
+  },
+  "preferGlobal": true,
+  "private": false,
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.1.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
     },
-    "bugs": {
-        "url": "https://github.com/yokuyuki/irc-quote-bot/issues"
+    "env": {
+      "node": true
     },
-    "keywords": [
-        "quote",
-        "bot"
-    ],
-    "bin": "./bin/bot.js",
-    "scripts": {
-        "test": "eslint bin/ lib/ test/",
-        "start": "node ./bin/bot.js",
-        "preversion": "npm test",
-        "postversion": "git push && git push --tags"
-    },
-    "dependencies": {
-        "irc": "^0.5.0",
-        "lodash": "^4.6.1",
-        "yargs": "^4.8.1",
-        "lokijs": "^1.4.1",
-        "touch": "^1.0.0",
-        "winston": "^2.2.0"
-    },
-    "preferGlobal": true,
-    "private": false,
-    "directories": {
-        "bin": "./bin",
-        "lib": "./lib"
-    },
-    "devDependencies": {
-        "chai": "^3.5.0",
-        "eslint": "^2.1.0",
-        "mocha": "^2.4.5",
-        "sinon": "^1.17.3",
-        "sinon-chai": "^2.8.0"
-    },
-    "eslintConfig": {
-        "parserOptions": {
-            "ecmaVersion": 6,
-            "sourceType": "module"
-        },
-        "env": {
-            "node": true
-        },
-        "extends": "eslint:recommended",
-        "rules": {
-            "indent": [
-                "error",
-                4
-            ],
-            "linebreak-style": [
-                "error",
-                "unix"
-            ],
-            "quotes": [
-                "error",
-                "single"
-            ],
-            "semi": [
-                "error",
-                "always"
-            ],
-            "comma-dangle": [
-                "error",
-                "only-multiline"
-            ],
-            "no-unused-vars": [
-                "error",
-                {
-                    "vars": "all",
-                    "args": "none"
-                }
-            ]
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "comma-dangle": [
+        "error",
+        "only-multiline"
+      ],
+      "no-unused-vars": [
+        "error",
+        {
+          "vars": "all",
+          "args": "none"
         }
-    },
-    "engines": {
-        "node": ">= 4.4.5",
-        "npm": ">= 2.0.x"
+      ]
     }
+  },
+  "engines": {
+    "node": ">= 4.4.5",
+    "npm": ">= 2.0.x"
+  }
 }
