@@ -2,7 +2,7 @@
 'use strict';
 
 const argv = require('yargs')
-    .usage('Usage: quote-bot -c <config_path>')
+    .usage('Usage: irc-quote-bot -c <config_path>')
     .command('init <channel> <quotes_path>', 'Initialize with quotes from a channel')
     .config('config')
     .default('config', 'config.json')

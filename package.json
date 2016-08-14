@@ -1,16 +1,16 @@
 {
-    "name": "quote-bot",
+    "name": "irc-quote-bot",
     "version": "0.3.0",
     "description": "Simple quote bot in NodeJS",
     "author": "Ed Chen <edychen@gmail.com>",
     "license": "MIT",
-    "homepage": "https://github.com/yokuyuki/quote-bot",
+    "homepage": "https://github.com/yokuyuki/irc-quote-bot",
     "repository": {
         "type": "git",
-        "url": "https://github.com/yokuyuki/quote-bot"
+        "url": "https://github.com/yokuyuki/irc-quote-bot"
     },
     "bugs": {
-        "url": "https://github.com/yokuyuki/quote-bot/issues"
+        "url": "https://github.com/yokuyuki/irc-quote-bot/issues"
     },
     "keywords": [
         "quote",
