@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/irc-quote-bot.svg)](https://badge.fury.io/js/irc-quote-bot)
+
 # IRC quote bot
 
 IRC quote bot is a Node.js application that will add, delete, and get quotes for multiple IRC channels on a single server.
