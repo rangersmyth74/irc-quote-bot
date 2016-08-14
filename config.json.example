@@ -1,0 +1,13 @@
+{
+    "server": "irc.rizon.net",
+    "bot_name": "QuoteBot",
+    "channels": ["#quotebot"],
+    "floodProtection": true,
+    "aliases": {
+        "quote": "!quote",
+        "lastquote": "!lastquote",
+        "add_quote": "+quote",
+        "del_quote": "-quote"
+    },
+    "quote_limit": 5
+}

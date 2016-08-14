@@ -15,6 +15,7 @@ const argv = require('yargs')
     .argv;
 
 require('../lib/logger.js').init(argv.verbose);
+const config = require('../lib/config.js').init(argv);
 const QuoteStore = require('../lib/quote-store.js');
 const IrcController = require('../lib/irc-controller.js');
 
@@ -23,6 +24,6 @@ var quotes = new QuoteStore(() => {
         quotes.init('#' + argv.channel, argv.quotes_path);
         quotes.close(() => process.exit());
     } else {
-        new IrcController(quotes, argv);
+        new IrcController(quotes, config);
     }
 });
