@@ -7,20 +7,22 @@ const argv = require('yargs')
     .config('config')
     .default('config', 'config.json')
     .alias('c', 'config')
+    .count('verbose')
+    .alias('v', 'verbose')
     .version(() => require('../package.json').version)
     .help('h')
     .alias('h', 'help')
     .argv;
 
-const logger = require('winston');
+require('../lib/logger.js').init(argv.verbose);
 const QuoteStore = require('../lib/quote-store.js');
 const IrcController = require('../lib/irc-controller.js');
 
-var quotes = new QuoteStore(logger, () => {
+var quotes = new QuoteStore(() => {
     if (argv.channel && argv.quotes_path) {
         quotes.init('#' + argv.channel, argv.quotes_path);
         quotes.close(() => process.exit());
     } else {
-        new IrcController(logger, quotes, argv);
+        new IrcController(quotes, argv);
     }
 });
