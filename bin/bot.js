@@ -24,6 +24,6 @@ var quotes = new QuoteStore(() => {
         quotes.init('#' + argv.channel, argv.quotes_path);
         quotes.close(() => process.exit());
     } else {
-        new IrcController(quotes, config);
+        new IrcController(quotes, config, () => process.exit());
     }
 });
