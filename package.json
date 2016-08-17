@@ -1,6 +1,6 @@
 {
   "name": "irc-quote-bot",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Simple quote bot in NodeJS",
   "author": "Ed Chen <edychen@gmail.com>",
   "license": "MIT",
